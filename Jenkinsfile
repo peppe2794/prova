@@ -7,7 +7,7 @@ pipeline {
     stage('Provisioning'){
       steps{
          sh label: '', script: 'terraform init'
-         sh label: '', sript: 'terraform apply --auto-approve'
+         sh label: '', script: 'terraform apply --auto-approve'
       }
     }
   }
