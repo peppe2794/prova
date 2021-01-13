@@ -6,8 +6,10 @@ pipeline {
   stages{
     stage('Provisioning'){
       steps{
-         sh label: '', script: 'terraform init'
-         sh label: '', script: 'export PM_USER=th.giuseppe.zagaria; export PM_PASS=th.giuseppe.zagaria@!; terraform apply --auto-approve'
+        withCredentials([usernamePassword(credentialsId: 'Proxmox', passwordVariable: 'PASSWORD', usernameVariable: 'USER')]) {
+          sh label: '', script: 'terraform init'
+          sh label: '', script: 'export PM_USER=${USER}; export PM_PASS=${PASSWORD}; terraform apply --auto-approve'
+        }
       }
     }
   }
