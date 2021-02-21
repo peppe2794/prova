@@ -1,0 +1,255 @@
+{
+  "istance_ips": {
+    "sensitive": false,
+    "type": [
+      "tuple",
+      [
+        [
+          "object",
+          {
+            "agent": "number",
+            "balloon": "number",
+            "bios": "string",
+            "boot": "string",
+            "bootdisk": "string",
+            "bridge": "string",
+            "ci_wait": "number",
+            "cicustom": "string",
+            "cipassword": "string",
+            "ciuser": "string",
+            "clone": "string",
+            "clone_wait": "number",
+            "cores": "number",
+            "cpu": "string",
+            "define_connection_info": "bool",
+            "desc": "string",
+            "disk": [
+              "list",
+              [
+                "object",
+                {
+                  "backup": "bool",
+                  "cache": "string",
+                  "discard": "string",
+                  "file": "string",
+                  "format": "string",
+                  "iothread": "bool",
+                  "mbps": "number",
+                  "mbps_rd": "number",
+                  "mbps_rd_max": "number",
+                  "mbps_wr": "number",
+                  "mbps_wr_max": "number",
+                  "media": "string",
+                  "replicate": "bool",
+                  "size": "string",
+                  "slot": "number",
+                  "ssd": "bool",
+                  "storage": "string",
+                  "storage_type": "string",
+                  "type": "string",
+                  "volume": "string"
+                }
+              ]
+            ],
+            "disk_gb": "number",
+            "force_create": "bool",
+            "force_recreate_on_change_of": "string",
+            "full_clone": "bool",
+            "hastate": "string",
+            "hotplug": "string",
+            "id": "string",
+            "ipconfig0": "string",
+            "ipconfig1": "string",
+            "ipconfig2": "string",
+            "iso": "string",
+            "kvm": "bool",
+            "mac": "string",
+            "memory": "number",
+            "name": "string",
+            "nameserver": "string",
+            "network": [
+              "list",
+              [
+                "object",
+                {
+                  "bridge": "string",
+                  "firewall": "bool",
+                  "link_down": "bool",
+                  "macaddr": "string",
+                  "model": "string",
+                  "queues": "number",
+                  "rate": "number",
+                  "tag": "number"
+                }
+              ]
+            ],
+            "nic": "string",
+            "numa": "bool",
+            "onboot": "bool",
+            "os_network_config": "string",
+            "os_type": "string",
+            "pool": "string",
+            "preprovision": "bool",
+            "qemu_os": "string",
+            "scsihw": "string",
+            "searchdomain": "string",
+            "serial": [
+              "set",
+              [
+                "object",
+                {
+                  "id": "number",
+                  "type": "string"
+                }
+              ]
+            ],
+            "sockets": "number",
+            "ssh_forward_ip": "string",
+            "ssh_host": "string",
+            "ssh_port": "string",
+            "ssh_private_key": "string",
+            "ssh_user": "string",
+            "sshkeys": "string",
+            "storage": "string",
+            "storage_type": "string",
+            "target_node": "string",
+            "unused_disk": [
+              "list",
+              [
+                "object",
+                {
+                  "file": "string",
+                  "slot": "number",
+                  "storage": "string"
+                }
+              ]
+            ],
+            "vcpus": "number",
+            "vga": [
+              "set",
+              [
+                "object",
+                {
+                  "memory": "number",
+                  "type": "string"
+                }
+              ]
+            ],
+            "vlan": "number",
+            "vmid": "number"
+          }
+        ]
+      ]
+    ],
+    "value": [
+      {
+        "agent": 0,
+        "balloon": 0,
+        "bios": "seabios",
+        "boot": "cdn",
+        "bootdisk": "scsi0",
+        "bridge": "",
+        "ci_wait": null,
+        "cicustom": "",
+        "cipassword": "",
+        "ciuser": "deploy",
+        "clone": "Template",
+        "clone_wait": 15,
+        "cores": 4,
+        "cpu": "host",
+        "define_connection_info": true,
+        "desc": "user: deploy\npassword: deploy\nroot pass: deploy",
+        "disk": [
+          {
+            "backup": false,
+            "cache": "none",
+            "discard": "",
+            "file": "152/vm-152-disk-0.raw",
+            "format": "",
+            "iothread": false,
+            "mbps": 0,
+            "mbps_rd": 0,
+            "mbps_rd_max": 0,
+            "mbps_wr": 0,
+            "mbps_wr_max": 0,
+            "media": "",
+            "replicate": false,
+            "size": "22732M",
+            "slot": 0,
+            "ssd": false,
+            "storage": "nas_storage",
+            "storage_type": "nfs",
+            "type": "scsi",
+            "volume": "nas_storage:152/vm-152-disk-0.raw"
+          }
+        ],
+        "disk_gb": 0,
+        "force_create": false,
+        "force_recreate_on_change_of": null,
+        "full_clone": true,
+        "hastate": "",
+        "hotplug": "network,disk,usb",
+        "id": "pve/qemu/152",
+        "ipconfig0": "ip=192.168.6.11/24,gw=192.168.6.1",
+        "ipconfig1": "",
+        "ipconfig2": "",
+        "iso": null,
+        "kvm": true,
+        "mac": "",
+        "memory": 8192,
+        "name": "tf-vm0",
+        "nameserver": "",
+        "network": [
+          {
+            "bridge": "vmbr1",
+            "firewall": true,
+            "link_down": false,
+            "macaddr": "6A:EF:71:9B:64:15",
+            "model": "virtio",
+            "queues": 0,
+            "rate": 0,
+            "tag": -1
+          }
+        ],
+        "nic": "",
+        "numa": false,
+        "onboot": true,
+        "os_network_config": null,
+        "os_type": "cloud-init",
+        "pool": "Tesi_Zagaria",
+        "preprovision": true,
+        "qemu_os": "l26",
+        "scsihw": "virtio-scsi-pci",
+        "searchdomain": "",
+        "serial": [],
+        "sockets": 1,
+        "ssh_forward_ip": null,
+        "ssh_host": null,
+        "ssh_port": null,
+        "ssh_private_key": null,
+        "ssh_user": null,
+        "sshkeys": "",
+        "storage": "",
+        "storage_type": "",
+        "target_node": "pve",
+        "unused_disk": [],
+        "vcpus": 0,
+        "vga": [],
+        "vlan": -1,
+        "vmid": null
+      }
+    ]
+  },
+  "istance_memory": {
+    "sensitive": false,
+    "type": [
+      "tuple",
+      [
+        "string"
+      ]
+    ],
+    "value": [
+      null
+    ]
+  }
+}
